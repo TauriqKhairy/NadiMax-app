@@ -1,4 +1,9 @@
 class ApiConfig {
+  // ==========================================================
+  // MODE DEMO — set true kalau mau pakai data dummy (offline),
+  // set false untuk connect ke Laravel API beneran.
+  // ==========================================================
+  static const bool isDemoMode = true;
   // IP address PC (WiFi) — pastikan HP & PC terhubung ke WiFi yang sama
   static const String baseUrl = 'http://192.168.100.118:8000/api';
 

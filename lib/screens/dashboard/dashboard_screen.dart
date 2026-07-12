@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../profile/profile_screen.dart';
 import '../../providers/auth_provider.dart';
+import '../workout/workout_list_screen.dart';
+import '../device/device_list_screen.dart';
+import '../subscription/subscription_screen.dart';
+import '../heart_rate/heart_rate_history_screen.dart';
 import '../../providers/heart_rate_provider.dart';
 import '../../providers/subscription_provider.dart';
 import '../auth/login_screen.dart';
@@ -167,28 +172,55 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     icon: Icons.devices_outlined,
                     label: 'Device',
                     onTap: () {
-                      // Nanti dihubungkan ke DeviceListScreen
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const DeviceListScreen(),
+                        ),
+                      );
                     },
                   ),
                   _buildMenuCard(
                     icon: Icons.fitness_center_outlined,
                     label: 'Jadwal Latihan',
                     onTap: () {
-                      // Nanti dihubungkan ke WorkoutListScreen
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const WorkoutListScreen(),
+                        ),
+                      );
                     },
                   ),
                   _buildMenuCard(
                     icon: Icons.show_chart_outlined,
                     label: 'History BPM',
                     onTap: () {
-                      // Nanti dihubungkan ke HeartRateHistoryScreen
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const HeartRateHistoryScreen(),
+                        ),
+                      );
                     },
                   ),
                   _buildMenuCard(
                     icon: Icons.person_outline,
                     label: 'Profile',
                     onTap: () {
-                      // Nanti dihubungkan ke ProfileScreen
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                  _buildMenuCard(
+                    icon: Icons.workspace_premium_outlined,
+                    label: 'Langganan',
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const SubscriptionScreen(),
+                        ),
+                      );
                     },
                   ),
                 ],
